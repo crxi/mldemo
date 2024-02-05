@@ -1,0 +1,269 @@
+{
+    "metadata": {
+        "streamsync_version": "0.3.0"
+    },
+    "components": {
+        "root": {
+            "id": "root",
+            "type": "root",
+            "content": {
+                "appName": "My App"
+            },
+            "parentId": null,
+            "position": 0,
+            "handlers": {},
+            "visible": true
+        },
+        "c0f99a9e-5004-4e75-a6c6-36f17490b134": {
+            "id": "c0f99a9e-5004-4e75-a6c6-36f17490b134",
+            "type": "page",
+            "content": {
+                "pageMode": "compact",
+                "key": ""
+            },
+            "parentId": "root",
+            "position": 0,
+            "handlers": {},
+            "visible": true
+        },
+        "bebc5fe9-63a7-46a7-b0fa-62303555cfaf": {
+            "id": "bebc5fe9-63a7-46a7-b0fa-62303555cfaf",
+            "type": "header",
+            "content": {
+                "text": "@{label.title}"
+            },
+            "parentId": "c0f99a9e-5004-4e75-a6c6-36f17490b134",
+            "position": 0,
+            "handlers": {},
+            "visible": true
+        },
+        "lar53u323dcz0z8l": {
+            "id": "lar53u323dcz0z8l",
+            "type": "columns",
+            "content": {},
+            "parentId": "c0f99a9e-5004-4e75-a6c6-36f17490b134",
+            "position": 1,
+            "handlers": {},
+            "visible": true
+        },
+        "hz6rv0706zkkpjgv": {
+            "id": "hz6rv0706zkkpjgv",
+            "type": "column",
+            "content": {
+                "width": "2"
+            },
+            "parentId": "lar53u323dcz0z8l",
+            "position": 0,
+            "handlers": {},
+            "visible": true
+        },
+        "n74w1nh26itdgkix": {
+            "id": "n74w1nh26itdgkix",
+            "type": "column",
+            "content": {
+                "width": "1",
+                "title": ""
+            },
+            "parentId": "lar53u323dcz0z8l",
+            "position": 2,
+            "handlers": {},
+            "visible": true
+        },
+        "6q2sjzxf2dh7gbzv": {
+            "id": "6q2sjzxf2dh7gbzv",
+            "type": "separator",
+            "content": {},
+            "parentId": "lar53u323dcz0z8l",
+            "position": 1,
+            "handlers": {},
+            "visible": true
+        },
+        "mlwuqkfgj1kvm08l": {
+            "id": "mlwuqkfgj1kvm08l",
+            "type": "plotlygraph",
+            "content": {
+                "spec": "@{graph}",
+                "cssClasses": ""
+            },
+            "parentId": "hz6rv0706zkkpjgv",
+            "position": 0,
+            "handlers": {
+                "plotly-click": "click"
+            }
+        },
+        "vbd42u4ohz5rrj9f": {
+            "id": "vbd42u4ohz5rrj9f",
+            "type": "sliderinput",
+            "content": {
+                "label": "@{label.a}",
+                "minValue": "-2",
+                "maxValue": "2",
+                "stepSize": "0.1"
+            },
+            "parentId": "n74w1nh26itdgkix",
+            "position": 0,
+            "handlers": {
+                "ss-number-change": "plot_line"
+            },
+            "binding": {
+                "eventType": "ss-number-change",
+                "stateRef": "abz.a"
+            },
+            "visible": true
+        },
+        "lxdj8zthsefibmj4": {
+            "id": "lxdj8zthsefibmj4",
+            "type": "sliderinput",
+            "content": {
+                "label": "@{label.b}",
+                "minValue": "-2",
+                "maxValue": "2",
+                "stepSize": "0.1"
+            },
+            "parentId": "n74w1nh26itdgkix",
+            "position": 1,
+            "handlers": {
+                "ss-number-change": "plot_line"
+            },
+            "binding": {
+                "eventType": "ss-number-change",
+                "stateRef": "abz.b"
+            }
+        },
+        "z71xuufmduddblj3": {
+            "id": "z71xuufmduddblj3",
+            "type": "sliderinput",
+            "content": {
+                "label": "@{label.z}",
+                "minValue": "-2",
+                "maxValue": "2",
+                "stepSize": "0.1"
+            },
+            "parentId": "n74w1nh26itdgkix",
+            "position": 2,
+            "handlers": {
+                "ss-number-change": "plot_line"
+            },
+            "binding": {
+                "eventType": "ss-number-change",
+                "stateRef": "abz.z"
+            },
+            "visible": true
+        },
+        "m83nlgl0x889jzto": {
+            "id": "m83nlgl0x889jzto",
+            "type": "text",
+            "content": {
+                "text": "Copyright \u00a9 2024 MerelyAI\nCreated using Python and StreamSync",
+                "alignment": "right"
+            },
+            "parentId": "c0f99a9e-5004-4e75-a6c6-36f17490b134",
+            "position": 2,
+            "handlers": {},
+            "visible": true
+        },
+        "cqpswl5u8pc0s5v7": {
+            "id": "cqpswl5u8pc0s5v7",
+            "type": "button",
+            "content": {
+                "text": "Reset"
+            },
+            "parentId": "1l9bm5mbvdzu5ozs",
+            "position": 1,
+            "handlers": {
+                "ss-click": "reset"
+            },
+            "visible": true
+        },
+        "ls2ps45h05o896o7": {
+            "id": "ls2ps45h05o896o7",
+            "type": "horizontalstack",
+            "content": {},
+            "parentId": "n74w1nh26itdgkix",
+            "position": 3,
+            "handlers": {},
+            "visible": true
+        },
+        "pa1wxgrkgdlucstw": {
+            "id": "pa1wxgrkgdlucstw",
+            "type": "checkboxinput",
+            "content": {
+                "label": "Display options",
+                "options": "{\n  \"usewwt\": \"Name x,y,z as w0,w1,\u03b8\",\n  \"contours\": \"Show contours\",\n  \"heatmap\": \"Show heatmap\",\n  \"ttab\": \"Show truth table\"\n}",
+                "orientation": "vertical"
+            },
+            "parentId": "xrbtvlblo2upn71t",
+            "position": 0,
+            "handlers": {
+                "ss-options-change": "options_changed"
+            },
+            "visible": true
+        },
+        "8r495b8xzz9dles8": {
+            "id": "8r495b8xzz9dles8",
+            "type": "columns",
+            "content": {},
+            "parentId": "ls2ps45h05o896o7",
+            "position": 0,
+            "handlers": {},
+            "visible": true
+        },
+        "xrbtvlblo2upn71t": {
+            "id": "xrbtvlblo2upn71t",
+            "type": "column",
+            "content": {
+                "width": "1"
+            },
+            "parentId": "8r495b8xzz9dles8",
+            "position": 0,
+            "handlers": {},
+            "visible": true
+        },
+        "dvl534xx01rwgoez": {
+            "id": "dvl534xx01rwgoez",
+            "type": "column",
+            "content": {
+                "width": "1"
+            },
+            "parentId": "8r495b8xzz9dles8",
+            "position": 1,
+            "handlers": {},
+            "visible": true
+        },
+        "5zbvxsgxd7s07vu5": {
+            "id": "5zbvxsgxd7s07vu5",
+            "type": "text",
+            "content": {
+                "text": "@{msg}",
+                "alignment": "left",
+                "useMarkdown": "yes"
+            },
+            "parentId": "n74w1nh26itdgkix",
+            "position": 4,
+            "handlers": {},
+            "visible": true
+        },
+        "r1odci0i6bzyssgc": {
+            "id": "r1odci0i6bzyssgc",
+            "type": "button",
+            "content": {
+                "text": "-1x"
+            },
+            "parentId": "1l9bm5mbvdzu5ozs",
+            "position": 0,
+            "handlers": {
+                "ss-click": "minus1"
+            },
+            "visible": true
+        },
+        "1l9bm5mbvdzu5ozs": {
+            "id": "1l9bm5mbvdzu5ozs",
+            "type": "horizontalstack",
+            "content": {},
+            "parentId": "dvl534xx01rwgoez",
+            "position": 0,
+            "handlers": {},
+            "visible": true
+        }
+    }
+}

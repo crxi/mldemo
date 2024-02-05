@@ -1,0 +1,209 @@
+{
+    "metadata": {
+        "streamsync_version": "0.3.0"
+    },
+    "components": {
+        "root": {
+            "id": "root",
+            "type": "root",
+            "content": {
+                "appName": "My App"
+            },
+            "parentId": null,
+            "position": 0,
+            "handlers": {},
+            "visible": true
+        },
+        "c0f99a9e-5004-4e75-a6c6-36f17490b134": {
+            "id": "c0f99a9e-5004-4e75-a6c6-36f17490b134",
+            "type": "page",
+            "content": {
+                "pageMode": "compact",
+                "key": ""
+            },
+            "parentId": "root",
+            "position": 0,
+            "handlers": {},
+            "visible": true
+        },
+        "bebc5fe9-63a7-46a7-b0fa-62303555cfaf": {
+            "id": "bebc5fe9-63a7-46a7-b0fa-62303555cfaf",
+            "type": "header",
+            "content": {
+                "text": "@{title}"
+            },
+            "parentId": "c0f99a9e-5004-4e75-a6c6-36f17490b134",
+            "position": 0,
+            "handlers": {},
+            "visible": true
+        },
+        "lar53u323dcz0z8l": {
+            "id": "lar53u323dcz0z8l",
+            "type": "columns",
+            "content": {},
+            "parentId": "c0f99a9e-5004-4e75-a6c6-36f17490b134",
+            "position": 1,
+            "handlers": {},
+            "visible": true
+        },
+        "hz6rv0706zkkpjgv": {
+            "id": "hz6rv0706zkkpjgv",
+            "type": "column",
+            "content": {
+                "width": "2"
+            },
+            "parentId": "lar53u323dcz0z8l",
+            "position": 0,
+            "handlers": {},
+            "visible": true
+        },
+        "n74w1nh26itdgkix": {
+            "id": "n74w1nh26itdgkix",
+            "type": "column",
+            "content": {
+                "width": "1"
+            },
+            "parentId": "lar53u323dcz0z8l",
+            "position": 2,
+            "handlers": {},
+            "visible": true
+        },
+        "6q2sjzxf2dh7gbzv": {
+            "id": "6q2sjzxf2dh7gbzv",
+            "type": "separator",
+            "content": {},
+            "parentId": "lar53u323dcz0z8l",
+            "position": 1,
+            "handlers": {},
+            "visible": true
+        },
+        "mlwuqkfgj1kvm08l": {
+            "id": "mlwuqkfgj1kvm08l",
+            "type": "plotlygraph",
+            "content": {
+                "spec": "@{graph}",
+                "cssClasses": ""
+            },
+            "parentId": "hz6rv0706zkkpjgv",
+            "position": 0,
+            "handlers": {
+                "plotly-click": "graph_click"
+            }
+        },
+        "vbd42u4ohz5rrj9f": {
+            "id": "vbd42u4ohz5rrj9f",
+            "type": "sliderinput",
+            "content": {
+                "label": "Size of Data",
+                "minValue": "20",
+                "maxValue": "100",
+                "stepSize": "1"
+            },
+            "parentId": "n74w1nh26itdgkix",
+            "position": 0,
+            "handlers": {
+                "ss-number-change": "draw_graph"
+            },
+            "binding": {
+                "eventType": "ss-number-change",
+                "stateRef": "size"
+            },
+            "visible": true
+        },
+        "lxdj8zthsefibmj4": {
+            "id": "lxdj8zthsefibmj4",
+            "type": "sliderinput",
+            "content": {
+                "label": "K",
+                "minValue": "1",
+                "maxValue": "15",
+                "stepSize": "2"
+            },
+            "parentId": "n74w1nh26itdgkix",
+            "position": 1,
+            "handlers": {
+                "ss-number-change": "draw_graph"
+            },
+            "binding": {
+                "eventType": "ss-number-change",
+                "stateRef": "k"
+            },
+            "visible": true
+        },
+        "z71xuufmduddblj3": {
+            "id": "z71xuufmduddblj3",
+            "type": "sliderinput",
+            "content": {
+                "label": "Data Flipped% (@{flip} out of @{size})",
+                "minValue": "0",
+                "maxValue": "100",
+                "stepSize": "5"
+            },
+            "parentId": "n74w1nh26itdgkix",
+            "position": 2,
+            "handlers": {
+                "ss-number-change": "draw_graph"
+            },
+            "binding": {
+                "eventType": "ss-number-change",
+                "stateRef": "flippct"
+            },
+            "visible": true
+        },
+        "65gqxrypkavl4tdk": {
+            "id": "65gqxrypkavl4tdk",
+            "type": "numberinput",
+            "content": {
+                "label": "Seed",
+                "placeholder": "Input a number",
+                "minValue": "0",
+                "maxValue": "2147483648",
+                "cssClasses": ""
+            },
+            "parentId": "n74w1nh26itdgkix",
+            "position": 3,
+            "handlers": {
+                "ss-number-change": "draw_graph"
+            },
+            "binding": {
+                "eventType": "ss-number-change",
+                "stateRef": "seed"
+            },
+            "visible": true
+        },
+        "ie2p9b77s7bg0f1q": {
+            "id": "ie2p9b77s7bg0f1q",
+            "type": "separator",
+            "content": {},
+            "parentId": "n74w1nh26itdgkix",
+            "position": 4,
+            "handlers": {},
+            "visible": true
+        },
+        "7x80jjwex93i0wg2": {
+            "id": "7x80jjwex93i0wg2",
+            "type": "text",
+            "content": {
+                "text": "@{result}",
+                "useMarkdown": "yes",
+                "alignment": "center"
+            },
+            "parentId": "n74w1nh26itdgkix",
+            "position": 5,
+            "handlers": {},
+            "visible": true
+        },
+        "m83nlgl0x889jzto": {
+            "id": "m83nlgl0x889jzto",
+            "type": "text",
+            "content": {
+                "text": "Copyright \u00a9 2024 MerelyAI\nCreated using Python and StreamSync",
+                "alignment": "right"
+            },
+            "parentId": "c0f99a9e-5004-4e75-a6c6-36f17490b134",
+            "position": 2,
+            "handlers": {},
+            "visible": true
+        }
+    }
+}

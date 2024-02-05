@@ -1,0 +1,5 @@
+streamsync==0.3.0
+fastapi
+numpy
+plotly
+uvicorn
