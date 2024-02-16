@@ -113,8 +113,8 @@ def options_changed(state, payload):
     plot_line(state)
 
 
-labelwwt = dict(a='w0', b='w1', x='x0', y='x1', z='θ',
-                title='w0⋅x0 + w1⋅x1 = θ')
+labelwwt = dict(a='w1', b='w2', x='x1', y='x2', z='θ',
+                title='w1⋅x1 + w2⋅x2 = θ')
 labelabz = dict(a='a', b='b', x='x', y='y', z='z',
                 title='a⋅x + b⋅y = z')
 deflabel = labelabz
