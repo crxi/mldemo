@@ -189,7 +189,7 @@
             "type": "checkboxinput",
             "content": {
                 "label": "Display options",
-                "options": "{\n  \"usewwt\": \"Name x,y,z as w0,w1,\u03b8\",\n  \"contours\": \"Show contours\",\n  \"heatmap\": \"Show heatmap\",\n  \"ttab\": \"Show truth table\"\n}",
+                "options": "{\n  \"usewwt\": \"Name x,y,z as w1,w2,\u03b8\",\n  \"contours\": \"Show contours\",\n  \"heatmap\": \"Show heatmap\",\n  \"ttab\": \"Show truth table\"\n}",
                 "orientation": "vertical"
             },
             "parentId": "xrbtvlblo2upn71t",
