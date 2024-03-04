@@ -11,16 +11,19 @@ args = parser.parse_args()
 
 knn_app = streamsync.serve.get_asgi_app("./knn", "run")
 wwt_app = streamsync.serve.get_asgi_app("./wwt", "run")
+kcl_app = streamsync.serve.get_asgi_app("./kcl", "run")
 
 @asynccontextmanager
 async def lifespan_context(app: FastAPI):
     async with knn_app.router.lifespan_context(app):
         async with wwt_app.router.lifespan_context(app):
-            yield
+            async with kcl_app.router.lifespan_context(app):
+                yield
 
 root_asgi_app = FastAPI(lifespan=lifespan_context)
 root_asgi_app.mount("/knn", knn_app)
 root_asgi_app.mount("/wwt", wwt_app)
+root_asgi_app.mount("/kcl", kcl_app)
 
 @root_asgi_app.get("/")
 async def init():
