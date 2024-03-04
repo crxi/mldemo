@@ -1,5 +1,6 @@
 streamsync==0.3.0
 fastapi
 numpy
+pandas
 plotly
 uvicorn
