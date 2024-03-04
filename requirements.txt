@@ -3,4 +3,5 @@ fastapi
 numpy
 pandas
 plotly
+scipy
 uvicorn
